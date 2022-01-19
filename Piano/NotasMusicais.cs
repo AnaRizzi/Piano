@@ -12,7 +12,8 @@ namespace Piano
             { "fa", new Fa() },
             { "sol", new Sol() },
             { "la", new La() },
-            { "si", new Si() }
+            { "si", new Si() },
+            { "pausa", new Pausa() }
         };
 
         public INota Pega(string nome)

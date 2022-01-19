@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Piano
 {
@@ -9,7 +11,14 @@ namespace Piano
         {
             foreach (INota nota in musica)
             {
-                Console.Beep(nota.Frequencia, 500);
+                if (nota.Frequencia == 0)
+                {
+                    Task.Delay(500).Wait();
+                }
+                else
+                {
+                    Console.Beep(nota.Frequencia, 500);
+                }
             }
 
         }
